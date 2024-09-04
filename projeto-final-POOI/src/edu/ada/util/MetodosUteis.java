@@ -1,4 +1,4 @@
-package edu.ada.agenda.util;
+package edu.ada.util;
 
 public class MetodosUteis {
     //TODO fazer aqui os métodos para verificar os dados?

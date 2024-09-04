@@ -1,4 +1,4 @@
-package edu.ada.agenda.util;
+package edu.ada;
 
 public class Menu {
     //TODO A lógica do menu
