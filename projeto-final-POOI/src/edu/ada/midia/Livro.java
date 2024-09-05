@@ -10,22 +10,6 @@ public class Livro extends Midia{
         this.idiomaLido = idiomaLido;
     }
 
-    public String getTitulo() {
-        return this.titulo;
-    }
-
-    public String getGenero() {
-        return this.genero;
-    }
-
-    public int getAnoLancamento() {
-        return this.anoLancamento;
-    }
-
-    public int getAvaliacao() {
-        return this.avaliacao;
-    }
-
     public String getAutor(){
         return this.autor;
     }
@@ -34,11 +18,5 @@ public class Livro extends Midia{
         return this.idiomaLido;
     }
 
-    public void setAvaliacao(int avaliacao) {
-        this.avaliacao = avaliacao;
-    }
 
-    
-
-    
 }

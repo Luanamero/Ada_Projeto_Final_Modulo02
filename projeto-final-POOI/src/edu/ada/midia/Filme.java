@@ -11,21 +11,6 @@ public class Filme extends Midia {
         this.oscar = oscar;
     }
 
-    public String getTitulo() {
-        return this.titulo;
-    }
-
-    public String getGenero() {
-        return this.genero;
-    }
-
-    public int getAnoLancamento() {
-        return this.anoLancamento;
-    }
-
-    public int getAvaliacao() {
-        return this.avaliacao;
-    }
 
     public String getDiretor(){
         return this.diretor;
@@ -37,10 +22,6 @@ public class Filme extends Midia {
         }else{
             return "Esse filme nunca ganhou um oscar";
         }
-    }
-
-    public void setAvaliacao(int avaliacao) {
-        this.avaliacao = avaliacao;
     }
 
     public void setOscar(boolean oscar) {
