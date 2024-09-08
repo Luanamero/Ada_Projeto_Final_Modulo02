@@ -1,8 +1,10 @@
-import edu.ada.Menu;
+import edu.ada.view.Menu;
 
 public class Main {
     public static void main(String[] args) {
-        //TODO Aqui vai a implantação das classes
-        Menu.menu();
+
+        Menu menu = new Menu();
+        menu.abrirMenu();
+
     }
 }

@@ -10,20 +10,38 @@ public class Contato {
     private String nome;
     private String telefone;
     private String email;
-    private List<Midia> midias;
+    private List<Midia> midias = new ArrayList<>();
 
-    public Contato(String nome, String telefone, String email) {
-        this.id = 1; //Métodos para dar o id automaticamente
+    public Contato(String nome, String telefone, String email, List<Midia> midias) {
+        //Métodos para dar o id automaticamente
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
-        midias = new ArrayList<Midia>();
+        this.midias =  midias   ;
     }
-    public Contato() {}//Manter o construtor padrão?
 
+    @Override
+    public String toString() {
+        return "Contato{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", email='" + email + '\'' +
+                ", midias=" + midias +
+                '}';
+    }
+
+    public Contato() {}//Manter o construtor padrão?
 
     public Integer getId() {
         return id;
+    }
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public List<Midia> getMidias() {
+        return midias;
     }
 
     public String getNome() {
@@ -52,9 +70,13 @@ public class Contato {
         this.email = email;
     }
 
-    public void addMidia() {
-        //TODO faz as solicitações para receber o que precisa pra midia
-        Midia midia = null;//TODO usar um jeito para selecionar a midia desejada e adicionar a lista sugestão swich:case e dar um new
+    public void addMidia(Midia midia) {
+        if (midias == null) {
+            return;
+        }
         midias.add(midia);
     }
+
+
+
 }

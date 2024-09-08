@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 public class Agenda {
-    List<Contato> contatos;
+    public List<Contato> contatos;
 
-    public Agenda() {
+    public  Agenda() {
         contatos = new ArrayList<Contato>();
     }
 
@@ -20,7 +20,7 @@ public class Agenda {
         for (Contato contato : contatos) {
             if (Objects.equals(contato.getId(), id)) {
                 contatos.remove(contato);
-                System.out.println("Contato removido com sucesso!");;
+                System.out.println("Contato removido com sucesso!");
             }
             else
                 System.out.println("Contato não localizado");
@@ -60,7 +60,7 @@ public class Agenda {
         return null;
     }
 
-    private boolean verificaVazio() {
+    public boolean verificaVazio() {
         if (contatos.isEmpty()) {
             System.out.println("Agenda vazia");
             return true;
