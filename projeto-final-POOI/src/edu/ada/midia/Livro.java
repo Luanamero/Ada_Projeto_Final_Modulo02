@@ -18,5 +18,16 @@ public class Livro extends Midia{
         return this.idiomaLido;
     }
 
-
+    @Override
+    public String toString() {
+        return "Livro{" +
+                "titulo= " + titulo +
+                ", autor= " + autor +
+                ", idioma lido= " + idiomaLido +
+                ", pais de origem= " + paisOrigem +
+                ", avaliacao= " + avaliacao + " estrelas" +
+                ", ano de lancamento= " + anoLancamento +
+                ", genero= " + genero +
+                '}';
+    }
 }

@@ -10,14 +10,14 @@ public class Contato {
     private String nome;
     private String telefone;
     private String email;
-    private List<Midia> midias = new ArrayList<>();
+    private List<Midia> midias = new ArrayList<>();//inicializar no construtor?
 
     public Contato(String nome, String telefone, String email, List<Midia> midias) {
         //Métodos para dar o id automaticamente
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
-        this.midias =  midias   ;
+        this.midias =  midias;//Fazer construtor sem midia para ser opcional?
     }
 
     @Override
@@ -76,7 +76,4 @@ public class Contato {
         }
         midias.add(midia);
     }
-
-
-
 }

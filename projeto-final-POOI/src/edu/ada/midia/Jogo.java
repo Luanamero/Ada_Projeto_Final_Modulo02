@@ -18,4 +18,17 @@ public class Jogo extends Midia{
     public String getDesenvolvedor() {
         return desenvolvedor;
     }
+
+    @Override
+    public String toString() {
+        return "Jogo{" +
+                "titulo= " + titulo +
+                ", desenvolvedor= " + desenvolvedor +
+                ", estilo do jogo= " + estiloJogo +
+                ", genero= " + genero +
+                ", ano de lancamento= " + anoLancamento +
+                ", avaliação= " + avaliacao + " estrelas" +
+                ", país de origem= " + paisOrigem +
+                '}';
+    }
 }

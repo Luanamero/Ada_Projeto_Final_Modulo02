@@ -32,7 +32,7 @@ public class Agenda {
         for (Contato contato : contatos) {
             if (Objects.equals(contato.getId(), id)) {
                 return contato;
-            }
+            }//else falando que o contato não consta na lista?
         }
         return null;
     }
@@ -43,7 +43,7 @@ public class Agenda {
             System.out.println(contato);
         }
     }
-
+    //outro método apenas para pedir os dados?
     public Contato editarContato(Integer id,
                                  String novoNome,
                                  String novoTelefone,
@@ -60,12 +60,14 @@ public class Agenda {
         return null;
     }
 
-    public boolean verificaVazio() {
+    public boolean verificaVazio() {//Colocar na classe metodos uteis?
         if (contatos.isEmpty()) {
             System.out.println("Agenda vazia");
             return true;
         }
         return false;
     }
+
+
 
 }

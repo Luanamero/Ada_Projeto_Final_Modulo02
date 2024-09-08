@@ -18,7 +18,7 @@ public class Filme extends Midia {
     }
 
     public String getOscar(){
-        if(this.oscar == true){
+        if(this.oscar){
             return "Esse filme já ganhou um oscar";
         }else{
             return "Esse filme nunca ganhou um oscar";
@@ -29,5 +29,16 @@ public class Filme extends Midia {
         this.oscar = oscar;
     }
 
-    
+    @Override
+    public String toString() {
+        return "Filme{" +
+                "titulo= " + titulo +
+                "diretor= " + diretor +
+                ", oscar= " + (oscar? "sim": "não") +
+                ", genero= " + genero +
+                ", avaliacao= " + avaliacao + " estrelas" +
+                ", ano de lancamento= " + anoLancamento +
+                ", pais de origem='" + paisOrigem +
+                '}';
+    }
 }

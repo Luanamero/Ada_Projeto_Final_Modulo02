@@ -1,5 +1,5 @@
 package edu.ada.util;
-
+//fazer os métodos estáticos?
 public class MetodosUteis {
     //TODO fazer aqui os métodos para verificar os dados
 
