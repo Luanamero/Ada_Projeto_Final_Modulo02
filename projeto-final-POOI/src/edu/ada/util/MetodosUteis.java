@@ -1,20 +1,19 @@
 package edu.ada.util;
 //fazer os métodos estáticos?
-public class MetodosUteis {
+public abstract class MetodosUteis {
     //TODO fazer aqui os métodos para verificar os dados
 
     //    (verficar numero)
-    public boolean validaNome(String nome) {
+    public static boolean validaNome(String nome) {
 
         if (nome == null || nome.isEmpty()) {
             return false;
         }
 
-
         return true;
     }
 
-    public boolean validaEmail(String email) {
+    public static boolean validaEmail(String email) {
         if (email == null || email.isEmpty()) {
             return false;
         }
@@ -30,7 +29,7 @@ public class MetodosUteis {
 
     }
 
-    public boolean validaTelefone(String telefone) {
+    public static boolean validaTelefone(String telefone) {
         if (telefone == null || telefone.isEmpty()) {
             return false;
         }

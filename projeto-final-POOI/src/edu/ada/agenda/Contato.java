@@ -1,19 +1,19 @@
 package edu.ada.agenda;
-
 import edu.ada.midia.Midia;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Contato {
+    private  static int contador = 0;
     private Integer id;
     private String nome;
     private String telefone;
     private String email;
-    private List<Midia> midias = new ArrayList<>();//inicializar no construtor?
+    private List<Midia> midias; //inicializar no construtor?
 
     public Contato(String nome, String telefone, String email, List<Midia> midias) {
         //Métodos para dar o id automaticamente
+        this.midias = new ArrayList<>();
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
@@ -31,7 +31,13 @@ public class Contato {
                 '}';
     }
 
-    public Contato() {}//Manter o construtor padrão?
+    public Contato() {
+        midias = new ArrayList<>();
+        this.id = ++contador;
+
+    }//Manter o construtor padrão?
+
+
 
     public Integer getId() {
         return id;

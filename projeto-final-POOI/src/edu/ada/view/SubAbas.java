@@ -1,5 +1,7 @@
 package edu.ada.view;
+import edu.ada.view.Menu;
 
+import edu.ada.agenda.Contato;
 import edu.ada.midia.Filme;
 import edu.ada.midia.Jogo;
 import edu.ada.midia.Livro;
@@ -10,21 +12,39 @@ import java.util.Scanner;
 public class SubAbas {
     Scanner sc = new Scanner(System.in);
 
+    int opcao;
+    Midia midia;
+
+
+
     public Midia abrirOpcao(){
 
         System.out.println("1. Cadastrar livro");
         System.out.println("2. Cadastrar Jogo");
         System.out.println("3. Cadastrar Filme");
 
-        int opcao =  Integer.parseInt(sc.nextLine());
+        try {
+            opcao = Integer.parseInt(sc.nextLine());
+        }catch(NumberFormatException e){
+            System.out.println();
+            System.out.println("Por favor insira um número!");
+            abrirOpcao();
+        }
 
         switch (opcao) {
-            case 1 -> {return cadastrarLivro();}
-            case 2 -> {return cadastrarJogo();}
-            case 3 -> {return cadastrarFilme(); }
-            default ->  {System.out.println("Insira uma opção válida."); return null;}
+            case 1 -> {midia = cadastrarLivro();}
+            case 2 -> {midia = cadastrarJogo();}
+            case 3 -> {midia = cadastrarFilme(); }
+            default ->  {System.out.println("Insira uma opção válida.");
+                abrirOpcao();
+                }
         }
+
+
+        return midia;
     };
+
+
     private Midia cadastrarFilme() {
 
 
@@ -32,9 +52,9 @@ public class SubAbas {
         String titulo = sc.nextLine();
         System.out.println("Digite o genero");
         String genero = sc.nextLine();
-        sc.nextLine();
         System.out.println("Digite o ano de lançamento");
         int ano = sc.nextInt();
+        sc.nextLine();
         System.out.println("Digite o Avaliaçao ");
         int avaliacao = sc.nextInt();
         sc.nextLine();
@@ -44,6 +64,7 @@ public class SubAbas {
         String origem = sc.nextLine();
         System.out.println("Recebeu um oscar?");
         boolean oscar = sc.nextBoolean();
+        sc.nextLine();
 
         Filme filme = new Filme(titulo, genero, ano, avaliacao, diretor, origem, oscar);
         return filme;
@@ -55,6 +76,7 @@ public class SubAbas {
         String genero = sc.nextLine();
         System.out.println("Digite o ano de lançamento");
         int ano = sc.nextInt();
+        sc.nextLine();
         System.out.println("Digite o Avaliaçao ");
         int avaliacao = sc.nextInt();
         sc.nextLine();
@@ -79,6 +101,7 @@ public class SubAbas {
         String genero = sc.nextLine();
         System.out.println("Digite o ano de lançamento");
         int ano = sc.nextInt();
+        sc.nextLine();
         System.out.println("Digite o Avaliaçao ");
         int avaliacao = sc.nextInt();
         sc.nextLine();

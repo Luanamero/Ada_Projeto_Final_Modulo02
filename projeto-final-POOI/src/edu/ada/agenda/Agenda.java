@@ -21,6 +21,7 @@ public class Agenda {
             if (Objects.equals(contato.getId(), id)) {
                 contatos.remove(contato);
                 System.out.println("Contato removido com sucesso!");
+                break;
             }
             else
                 System.out.println("Contato não localizado");
@@ -44,10 +45,11 @@ public class Agenda {
         }
     }
     //outro método apenas para pedir os dados?
-    public Contato editarContato(Integer id,
-                                 String novoNome,
-                                 String novoTelefone,
-                                 String novoEmail) {
+    public Contato editarContato(
+            Integer id,
+            String novoNome,
+            String novoTelefone,
+            String novoEmail) {
         if (verificaVazio()) return null;
         for (Contato contato : contatos) {
             if (Objects.equals(contato.getId(), id)) {
